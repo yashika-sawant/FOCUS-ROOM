@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<meta charset="UTF-8">
-<title>Study Room</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-
 <body>
-<div class="particles">
+    <div class="particles">
 <span></span>
 <span></span>
 <span></span>
@@ -26,8 +24,7 @@
 <section class="room">
     <p id="welcomeMsg"></p>
     <div class="study-features">
-
-    <!-- Spotify Login -->
+ <!-- Spotify Login -->
     <div class="feature-box">
         <h3>🎵 Play Music</h3>
         <button onclick="loginSpotify()">Login to Spotify</button>
@@ -47,8 +44,7 @@
     <div class="ai-chat">
         <p id="aiResponse">Ask me anything 👇</p>
     </div>
-
-    <div class="ai-input">
+ <div class="ai-input">
         <input type="text" id="doubtInput" placeholder="Type your doubt...">
         <button onclick="solveDoubt()">➤</button>
     </div>
@@ -68,9 +64,18 @@
 <button onclick="resetTimer()">Reset</button>
 </div>
 
+<!-- Notes Section -->
+<div class="feature-box notes-box">
+    <h3>📝Notes</h3>
+    
+    <textarea id="notesArea" placeholder="Write your notes here..."></textarea>
+    
+    <div class="notes-buttons">
+        <button onclick="saveNotes()"> Save</button>
+        <button onclick="clearNotes()"> Clear</button>
+    </div>
+</div>
 </section>
-
 <script src="timer.js"></script>
-
 </body>
 </html>
