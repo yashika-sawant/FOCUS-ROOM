@@ -1,13 +1,12 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
-
 <head>
-<meta charset="UTF-8">
-<title>Coding Room</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-
 <body>
+
 <div class="particles">
 <span></span>
 <span></span>
@@ -17,6 +16,7 @@
 <span></span>
 <span></span>
 </div>
+
 <nav>
 <a href="index.html">⬅ Back</a>
 <h2>Coding Room</h2>
@@ -28,7 +28,6 @@
 <h1>Code & Focus</h1>
 
 <div id="timer">00:00:00</div>
-
 <div class="buttons">
 <button onclick="startTimer()">Start</button>
 <button onclick="pauseTimer()">Pause</button>
@@ -37,6 +36,18 @@
 
 <!-- coding area -->
 <textarea placeholder="Write your coding notes..."></textarea>
+
+<!-- ✅ Notes Section -->
+<div class="notes-section">
+    <h3>📝 Notes</h3>
+    <textarea id="notesArea" placeholder="Write your study notes here..."></textarea>
+
+    <div class="notes-buttons">
+        <button onclick="saveNotes()">💾 Save</button>
+        <button onclick="clearNotes()">🗑 Clear</button>
+    </div>
+</div>
+
 <!-- Code Tips -->
 <div class="code-tips">
 <h3>⚡ Coding Tips</h3>
@@ -47,6 +58,27 @@
 </section>
 
 <script src="timer.js"></script>
+
+<!-- ✅ Notes Script -->
+<script>
+window.onload = function () {
+    const savedNotes = localStorage.getItem("studyNotes");
+    if (savedNotes) {
+        document.getElementById("notesArea").value = savedNotes;
+    }
+};
+
+function saveNotes() {
+    const notes = document.getElementById("notesArea").value;
+    localStorage.setItem("studyNotes", notes);
+    alert("Notes saved!");
+}
+
+function clearNotes() {
+    document.getElementById("notesArea").value = "";
+    localStorage.removeItem("studyNotes");
+}
+</script>
 
 </body>
 </html>
