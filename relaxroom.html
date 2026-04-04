@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Relax Room</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="particles">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+<nav>
+<a href="index.html">⬅ Back</a>
+<h2>Coding Room</h2>
+<button onclick="toggleTheme()">🌙</button>
+</nav>
+
+<section class="room">
+    <p id="welcomeMsg"></p>
+    <div class="relax-box">
+    <h2>🌿 Calm Zone</h2>
+    <p>Close your eyes, breathe slowly, and let the stress fade away...</p>
+
+    <!-- Breathing Guide -->
+    <p id="breathText">Breathe In...</p>
+</div>
+
+
+<h1>Relax & Breathe</h1>
+
+<div id="timer">00:00:00</div>
+
+<div class="buttons">
+<button onclick="startTimer()">Start</button>
+<button onclick="pauseTimer()">Pause</button>
+<button onclick="resetTimer()">Reset</button>
+</div>
+
+<p>Take deep breaths and relax.</p>
+
+<!-- SOUND CONTROLS -->
+<div class="sound-controls">
+    <button onclick="playSound()">▶ Play Relax Sound</button>
+    <button onclick="stopSound()">⏸ Stop</button>
+</div>
+
+<!-- AUDIO FILE -->
+<audio id="relaxSound">
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+
+
+</section>
+
+<script src="timer.js"></script>
+</body>
+</html>
