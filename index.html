@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>MoodMe Rooms</title>
+
+<!-- linking CSS file -->
+<link rel="stylesheet" href="style.css">
+</head>
+<script src="timer.js"></script>
+<body>
+<nav>
+<h2>MoodMe</h2>
+<button onclick="toggleTheme()">🌙</button>
+</nav>
+<div class="particles">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<!-- Streak Dashboard -->
+<div class="streak">
+<h2>🔥 Daily Streak</h2>
+<p id="streakCount">0 days</p>
+<button onclick="increaseStreak()">Mark Today Done</button>
+</div>
+
+<!-- main container -->
+<section class="rooms">
+
+<h1>Select Your Room</h1>
+
+<!-- room buttons -->
+<div class="room-container">
+
+<!-- clicking this opens silent room -->
+<a href="studyroom.html" class="room-card">
+<h2>Study Room</h2>
+<p>Focus quietly with timer</p>
+</a>
+
+<!-- coding room -->
+<a href="codingroom.html" class="room-card">
+<h2>Coding Room</h2>
+<p>Code with focus timer</p>
+</a>
+
+<!-- relax room -->
+<a href="relaxroom.html" class="room-card">
+<h2>Relax Room</h2>
+<p>Take a calm break</p>
+</a>
+
+</div>
+
+
+</section>
+
+</body>
+</html>
